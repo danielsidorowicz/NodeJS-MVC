@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dont peek animals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .funcButtons {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .selects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+
+        button {
+            background-color: #fff;
+            border: 0 solid #e2e8f0;
+            border-radius: 1.5rem;
+            box-sizing: border-box;
+            color: #0d172a;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1;
+            padding: 1rem 1.6rem;
+            text-align: center;
+            text-decoration: none #0d172a solid;
+            text-decoration-thickness: auto;
+            transition: all 0.5s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        button:hover {
+            transition: 0.5s;
+            background-color: #1e293b;
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            button {
+                font-size: 1.125rem;
+                padding: 1rem 2rem;
+            }
+        }
+
+        select {
+            all: unset;
+        }
+
+        option {
+            outline: none;
+            width: 100%;
+            height: 100%;
+            background-color: #1e293b;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            font-size: 1.2em;
+            user-select: none;
+            -webkit-user-select: none;
+            display: inline-block;
+            font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1;
+            padding: 1rem 1.6rem;
+            border: 0 solid #e2e8f0;
+
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all" id="all">
+        <div class="funcButtons" id="funcButtons">
+            <button type="button" id="addOne">Add One</button>
+            <button type="button" id="addMany">Add Many</button>
+            <button type="button" id="delSel">Delete Selected</button>
+            <button type="button" id="UpdSel">Update Selected</button>
+            <button type="button" id="getAll">Get All</button>
+            <button type="button" id="delAll">Delete All</button>
+        </div>
+        <div class="selects" id="selects">
+            <div class="selectAnimal" id="selectAnimal">
+                <select name="animal" id="animal" size="3">
+                    <option value="kot">Kot</option>
+                    <option value="pies">Pies</option>
+                    <option value="krowa">Krowa</option>
+                </select>
+            </div>
+            <div class="selectColor" id="selectColor">
+                <select name="color" id="color" size="3">
+                    <option value="bialy">Biały</option>
+                    <option value="czarny">Czarny</option>
+                    <option value="zolty">Żółty</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
